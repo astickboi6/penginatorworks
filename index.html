@@ -3,55 +3,304 @@
 <head>
     <title>About Me</title>
     <style>
-
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             padding: 25px;
-            background-color: #A7C7E7;
+            background: repeating-linear-gradient(
+                45deg,
+                #A7C7E7,
+                #A7C7E7 20px,
+                #95B8D9 20px,
+                #95B8D9 40px
+            );
+            min-height: 100vh;
         }
-        .about-section {
-            margin-bottom: 30px;
-        }
-        .contact-form {
+        
+        .content-section {
             background-color: #fff;
-            padding: 15px;
+            padding: 20px;
+            margin: 20px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        
+        .content-section h1 {
+            color: #5C6AC4;
+            margin-top: 0;
+            border-bottom: 2px solid #5C6AC4;
+            padding-bottom: 10px;
+        }
+        
+        .content-section h2 {
+            color: #5C6AC4;
+            margin-top: 0;
+            border-bottom: 2px solid #5C6AC4;
+            padding-bottom: 10px;
+        }
+        
+        .content-section h3 {
+            color: #5C6AC4;
+        }
+        
+        .content-section p {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .content-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .content-section ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .content-section ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .content-section a {
+            color: #5C6AC4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .content-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .banner-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form h2 {
+            color: #5C6AC4;
+            margin-top: 0;
+            border-bottom: 2px solid #5C6AC4;
+            padding-bottom: 10px;
+        }
+        
         .contact-form label {
             display: block;
             margin: 10px 0 5px;
+            color: #333;
+            font-weight: 500;
         }
+        
         .contact-form input, .contact-form textarea {
             width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
+            padding: 10px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
+        
         .contact-form input[type="submit"] {
             background-color: #5C6AC4;
             color: white;
             border: none;
             cursor: pointer;
+            padding: 12px 24px;
+            font-weight: 500;
         }
+        
         .contact-form input[type="submit"]:hover {
             background-color: #4b5a9e;
+        }
+        
+        .auth-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .auth-section h2 {
+            color: #5C6AC4;
+            margin-top: 0;
+            border-bottom: 2px solid #5C6AC4;
+            padding-bottom: 10px;
+        }
+        
+        .auth-form {
+            margin-top: 15px;
+        }
+        
+        .auth-form h3 {
+            color: #5C6AC4;
+        }
+        
+        .auth-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .auth-form button {
+            background-color: #5C6AC4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px 5px 5px 0;
+            font-weight: 500;
+        }
+        
+        .auth-form button:hover {
+            background-color: #4b5a9e;
+        }
+        
+        .comment-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .comment-section h2 {
+            color: #5C6AC4;
+            margin-top: 0;
+            border-bottom: 2px solid #5C6AC4;
+            padding-bottom: 10px;
+        }
+        
+        .comment {
+            background-color: #f5f5f5;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border-left: 3px solid #5C6AC4;
+        }
+        
+        .comment-meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .comment-text {
+            color: #333;
+            line-height: 1.5;
+        }
+        
+        #comment-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            min-height: 80px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        #submit-comment {
+            background-color: #5C6AC4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        #submit-comment:hover {
+            background-color: #4b5a9e;
+        }
+        
+        .user-info {
+            background-color: #e8f4f8;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border-left: 3px solid #5C6AC4;
+        }
+        
+        .user-info button {
+            background-color: #5C6AC4;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+        
+        .user-info button:hover {
+            background-color: #4b5a9e;
+        }
+        
+        .footer {
+            background-color: #fff;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .footer p {
+            margin: 5px 0;
+            color: #666;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .error {
+            color: red;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+        
+        .success {
+            color: green;
+            margin: 10px 0;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
 
-<div class="about-section">
+<div class="content-section">
     <h1>Penginator Works</h1>
-    <p>Hello! Im Penginator89! I am a railfan, and I also play Roblox and Trainz. I will put my Trainz projects here (maybe) on this site, but for now, they are Blender projects. Thanks and goodbye! </p>
+    <p>Hello! I'm Penginator89!, I am a railfan, I also play Roblox and Trainz. On this site I will put my Trainz projects here (maybe), but for now it's blender projects. Thanks and goodbye!</p>
 </div>
 
-    <img src="https://media.discordapp.net/attachments/1356051028990103622/1366872876233392319/banner.png?ex=68128710&is=68113590&hm=f15fe4faf233736ef3b779dee40668aaca73fd469f96d0cde3ac831c5b34d1a7&=&format=webp&quality=lossless&width=818&height=212" alt="Penginator89" style="width: 744px; height: 130px; margin-bottom: 15px;">
+<img src="https://media.discordapp.net/attachments/1356051028990103622/1366872876233392319/banner.png?ex=68128710&is=68113590&hm=f15fe4faf233736ef3b779dee40668aaca73fd469f96d0cde3ac831c5b34d1a7&=&format=webp&quality=lossless&width=818&height=212" alt="Penginator89" class="banner-image">
 
-</div>
-
-<div class="social-media">
+<div class="content-section">
     <h2>Platforms</h2>
     <ul>
         <li><a href="https://www.youtube.com/@penginator89" target="_blank">YouTube</a></li>
@@ -59,7 +308,7 @@
     </ul>
 </div>
 
-<div class="downloads">
+<div class="content-section">
     <h2>Blender Projects</h2>
     <ul>
         <li><a href="https://drive.google.com/file/d/1Ct1qGjqrbvXCKFC_yzdLoCx9RCt1PS16/view?usp=sharing" download>Freelanced 2-8-0</a></li>
@@ -67,32 +316,67 @@
     </ul>
 </div>
 
-<div class="trainz-projects">
+<div class="content-section">
     <h2>Trainz Projects</h2>
     <p>Coming Soon...</p>
 </div>
 
-</body>
-</html>
+<div class="auth-section">
+    <h2>Account</h2>
+    <div id="user-info" class="user-info hidden">
+        <p>Logged in as: <span id="user-email"></span></p>
+        <button onclick="logout()">Log Out</button>
+    </div>
+    
+    <div id="login-form" class="auth-form">
+        <h3>Login</h3>
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <p id="login-error" class="error hidden"></p>
+    </div>
+    
+    <div id="register-form" class="auth-form">
+        <h3>Register</h3>
+        <input type="email" id="register-email" placeholder="Email" required>
+        <input type="password" id="register-password" placeholder="Password" required>
+        <button onclick="register()">Register</button>
+        <p id="register-error" class="error hidden"></p>
+    </div>
+</div>
 
-<form action="https://formspree.io/f/mpwyrwrd" method="POST">
+<div class="comment-section">
+    <h2>Comments</h2>
+    <div id="comment-form" class="hidden">
+        <textarea id="comment-input" placeholder="Write a comment..."></textarea>
+        <button id="submit-comment" onclick="submitComment()">Post Comment</button>
+        <p id="comment-error" class="error hidden"></p>
+    </div>
+    <p id="comment-login-message">Please log in to leave a comment.</p>
+    <div id="comments-list"></div>
+</div>
+
+<div class="contact-form">
     <h2>Contact</h2> 
-    <p><span style="font-size: 0.9em;">Use this form or contact me at astickboi6@gmail.com if you need to contact me with any questions or concerns.</p>
+    <p>Use this form if you need to contact me for any questions and concerns</p>
+    <a href="mailto:astickboi6@gmail.com">Or you can email me directly.</a>
+    <form action="https://formspree.io/f/mpwyrwrd" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
+        <input type="submit" value="Submit">
+    </form>
+</div>
 
-    <input type="submit" value="Submit">
-</form>
+<div class="footer">
+    <p>Website coded by Penginator89.</p>
+    <p>© 2025, all rights reserved to their original owners.</p>
+</div>
 
-
-
-
-<p><span style="font-size: 0.8em;">Website coded by Penginator89.</span></p>
-<p><span style="font-size: 0.8em;">© 2025, all rights reserved to their original owners.</span></p>
+<script src="auth.js"></script>
 
 </body>
 </html>
